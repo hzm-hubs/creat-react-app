@@ -12,3 +12,6 @@ npx create-react-app <project-name>
 3）`yarn build`
 
 更多解释说明见同级 run-scripts.md 文档 
+
+## 3.dotenv
+用于加载和设置环境变量的工具, dotenv 库本身并不提供打印环境变量的功能。

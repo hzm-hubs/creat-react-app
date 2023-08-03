@@ -1,22 +1,16 @@
+// 启动配置页面, 可在这里配置引入插件、样式
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import Home from "./views/home/App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import "./index.less";
 
-// import dotenv from "dotenv";
-// 声明使用环境配置文件
-// dotenv.config({
-// 	path: ".env",
-// });
-
-console.log("当前进程的环境信息", process);
 console.log("当前进程的环境信息", process.env);
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<Home />
 	</React.StrictMode>,
 	document.getElementById("root")
 );

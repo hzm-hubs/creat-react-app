@@ -1,17 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import dotenv from "dotenv";
+import "./index.css";
 import "./index.less";
 
+// import dotenv from "dotenv";
 // 声明使用环境配置文件
-dotenv.config({
-	path: ".env",
-});
+// dotenv.config({
+// 	path: ".env",
+// });
 
-console.log("当前进程环境信息", process.env);
+console.log("当前进程的环境信息", process);
+console.log("当前进程的环境信息", process.env);
 
 ReactDOM.render(
 	<React.StrictMode>

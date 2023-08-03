@@ -29,7 +29,8 @@ eg: 更改项目启动端口号
 
 更多配置说明访问 create-react-app 官方文档 [link][https://create-react-app.dev/docs/adding-custom-environment-variables "create-react-app 教程"]
 
-4. 通过 dontenv-cli 插件可设置加载.env文件到启动脚本
+4.通过 dontenv-cli 插件可设置加载.env文件到启动脚本
+在 .env.dev、.env.test、.env.prod 文件中设置变量 `REACT_APP_ENV` 变量
 package.json:
 
 `

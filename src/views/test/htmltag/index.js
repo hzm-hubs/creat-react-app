@@ -1,31 +1,56 @@
-import "./App.css";
-
-function App() {
-	console.log(alert1, " 调取函数");
+function Tags() {
 	return (
-		<div className="App">
-			<head>
-				<base href="https://reactjs.org" />
-			</head>
-			<em>React</em>
-			<strong>React</strong>
-			<dfn>React</dfn>
-			<code>
-				React <var>react</var>
-			</code>
-			<tt>React Org</tt>
-			<i>React</i>
-			<samp>React</samp>
-			<cite>React</cite>
-
-			<p>
-				love <sub>React</sub> <sup>Org</sup>
-				<strike>今天会不一样</strike>
-				<small>哪里不一样</small>
-				<ins>都不一样</ins>
-			</p>
+		<div>
+			<div>
+				em: <em>React</em>
+			</div>
+			<div>
+				em: <em>React</em>
+			</div>
+			<div>
+				em: <em>React</em>
+			</div>
+			<div>
+				strong: <strong>React</strong>
+			</div>
+			<div>
+				dfn: <dfn>React</dfn>
+			</div>
+			<div>
+				code: <code>React</code>
+			</div>
+			<div>
+				tt: <tt>React</tt>
+			</div>
+			<div>
+				tt: <tt>React</tt>
+			</div>
+			<div>
+				i: <i>React</i>
+			</div>
+			<div>
+				samp:<samp>React</samp>
+			</div>
+			<div>
+				cite: <cite>React</cite>
+			</div>
+			<div>
+				sub: <sub>React</sub>
+			</div>
+			<div>
+				sup: <sup>React</sup>
+			</div>
+			<div>
+				strike: <strike>React</strike>
+			</div>
+			<div>
+				small: <small>React</small>
+			</div>
+			<div>
+				ins: <ins>React</ins>
+			</div>
 		</div>
 	);
 }
 
-export default App;
+export default Tags;

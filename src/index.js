@@ -1,4 +1,4 @@
-// 启动配置页面, 可在这里配置引入插件、样式
+// 启动配置, 可在这里配置引入插件、样式
 import React from "react";
 import ReactDOM from "react-dom";
 import Home from "./views/home/App";

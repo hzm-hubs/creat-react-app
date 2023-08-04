@@ -50,3 +50,45 @@ eg: 更改项目启动端口号
     
     …………
 `
+
+## 4. 通过 craco 设置路径别名
+
+create-react-app （CRA）生成的项目，会通过react-scripts有自己的 webpack设置。默认没有加载
+根目录下的jsconfig.json、tsconfig.json文件的逻辑，或者是有自己的逻辑（因为当我创建tsconfig.json文件运行项目会提示我项目没有引入 Typescript ）。但我们可以通过 craco 插件设置路径别名，并更改启动脚本使其生效
+
+1. 在根目录创建craco.config.json
+   
+`
+    const path = require('path');
+
+    module.exports = {
+
+        webpack: {
+
+            alias: {
+
+                '@': path.resolve(__dirname, 'src/'),
+
+            },
+
+        },
+    
+    };
+`
+
+2. 修改 package.json 中的启动命令为 craco
+   
+`
+"dev": "dotenv -e .env.dev react-scripts start",
+`
+
+换到
+
+`
+dotenv -e .env.dev craco start
+`
+
+ps: 也可以使用 react-app-rewired 和 customize-cra 插件
+
+
+## 参考的搭建文档 [link][https://bbs.huaweicloud.com/blogs/370666]

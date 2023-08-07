@@ -1,8 +1,8 @@
 // 启动配置, 可在这里配置引入插件、样式
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./views/home/App";
 import reportWebVitals from "./reportWebVitals";
+import Layout from "./layouts/default.js";
 import "./index.css";
 import "./index.less";
 
@@ -10,7 +10,7 @@ console.log("当前进程的环境信息", process.env);
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Home />
+		<Layout />
 	</React.StrictMode>,
 	document.getElementById("root")
 );

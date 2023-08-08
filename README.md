@@ -97,3 +97,6 @@ ps: 也可以使用 react-app-rewired 和 customize-cra 插件
 ## 参考的搭建文档 [link][https://bbs.huaweicloud.com/blogs/370666]
 
 ## 5. 引入 react-router-dom
+
+`<BrowserRouter>`  
+v6 版本以后 `<Routes>` 替换 `<Switch>` 根据浏览器路径匹配某一 `<Route>` 显示

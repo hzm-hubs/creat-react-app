@@ -6,5 +6,5 @@
 
 // 2
 export default function Header() {
-	return <div className="header">头部</div>;
+  return <div className="header">头部</div>;
 }

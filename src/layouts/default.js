@@ -4,35 +4,26 @@ import { menus } from "@/router/index.js";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Home from "@/views/home/App.js";
-import NotFound from "@/views/404.js";
 
 function Layout() {
-	const menuList = menus.map((route, index) => {
-		return (
-			<Route
-				exact
-				path={route.path}
-				element={route.element}
-				key={index}
-			></Route>
-		);
-	});
+  // 注册集合
+  const menuList = menus.map((route, index) => {
+    // exact 完全匹配 <Route exact></Route>
+    return (
+      <Route path={route.path} element={route.element} key={index}></Route>
+    );
+  });
 
-	console.log("menus", menus);
-	console.log("Home", <Home />);
-	console.log("menuList", menuList);
-
-	return (
-		<BrowserRouter>
-			<Header></Header>
-			<Routes>
-				{menuList}
-				{/* <Route path="/" element={<Home />}></Route>
-				<Route path="/NotFound" element={NotFound}></Route> */}
-			</Routes>
-			<Footer></Footer>
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Header></Header>
+      <Routes>
+        {menuList}
+        {/* <Route path="/" element={<Home />}></Route> */}
+      </Routes>
+      <Footer></Footer>
+    </BrowserRouter>
+  );
 }
 
 export default Layout;

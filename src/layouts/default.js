@@ -7,16 +7,16 @@ import Footer from "@/components/Footer";
 // import Home from "@/views/home/App.js";
 
 function Layout() {
-  return (
-    <BrowserRouter>
-      <Header></Header>
-      <Routes>
-        {handleMenu()}
-        {/* <Route path="/" element={<Home />}></Route> */}
-      </Routes>
-      <Footer></Footer>
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter basename={process.env.PUBLIC_URL || ""}>
+			<Header></Header>
+			<Routes>
+				{handleMenu()}
+				{/* <Route path="/" element={<Home />}></Route> */}
+			</Routes>
+			<Footer></Footer>
+		</BrowserRouter>
+	);
 }
 
 export default Layout;

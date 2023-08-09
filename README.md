@@ -1,4 +1,4 @@
-## 1. 使用通用的脚手架 create-react-app 创建应用
+## 1. 使用通用的脚手架 [create-react-app](https://create-react-app.dev/docs/getting-started) 创建应用
 
 npx create-react-app <project-name>
 
@@ -13,7 +13,7 @@ npx create-react-app <project-name>
 
 + `yarn build`
 
-更多解释说明见同级 run-scripts.md 文档
+ 更多解释说明见同级 run-scripts.md 文档
 
 ## 3.react-scirpts 插件 有引入 dotenv、dotenv-expand 插件
 
@@ -35,7 +35,7 @@ eg: 更改项目启动端口号
 
 更多配置说明访问 create-react-app 官方文档 [link][https://create-react-app.dev/docs/adding-custom-environment-variables "create-react-app 教程"]
 
-#### 3.4 通过 dontenv-cli 插件可设置加载.env 文件到启动脚本
+#### 3.4 通过 [dontenv-cli](https://www.npmjs.com/package/dotenv-cli) 插件可设置加载.env 文件到启动脚本
 在 .env.dev、.env.test、.env.prod 文件中设置变量 `REACT_APP_ENV=development` 、`REACT_APP_ENV=` 、`REACT_APP_ENV=production`
 
 在 package.json 配置启动命令:
@@ -58,7 +58,7 @@ eg: 更改项目启动端口号
 
 ```
 
-## 4. 通过 craco 设置路径别名
+## 4. 通过 [craco](https://www.npmjs.com/package/@craco/craco) 设置路径别名
 
 create-react-app （CRA）生成的项目，会通过 react-scripts 有自己的 webpack 设置。默认没有加载
 根目录下的 jsconfig.json、tsconfig.json 文件的逻辑，或者是有自己的逻辑（因为当我创建 tsconfig.json 文件运行项目会提示我项目没有引入 Typescript ）。但我们可以通过 craco 插件设置路径别名，并更改启动脚本使其生效
@@ -95,11 +95,11 @@ const path = require('path');
 ps: 也可以使用 react-app-rewired 和 customize-cra 插件
 
 
-## 5. 引入 react-router-dom
+## 5. 引入 [react-router-dom](https://reactrouter.com/en/main/router-components/browser-router)
 
 #### 5.1主要概念、标签：
 
-* <BrowserRouter>创建历史记录，将初始位置放入状态，并订阅URL。
+* <BrowserRouter>创建历史记录，将初始位置放入状态，并订阅URL, 其 `basename` 属性可用于设置基础路由。
 
 * <Routes>递归其子路由以构建路由配置，将这些路由与位置进行匹配，创建一些路由匹配项，并呈现第一个匹配的路由元素，v6 版本以后 `<Routes>` 替换 `<Switch>` 。
 
@@ -118,7 +118,7 @@ ps: 也可以使用 react-app-rewired 和 customize-cra 插件
 
 #### 5.2添加新路由步骤
 
-<font color="red">
+<font color="yellow">
 添加新路由首先需要在views创建页面、其次
 在router中引入声明</font>
 

@@ -1,0 +1,4 @@
+# prettier 要忽略的文件
+
+/node_modules
+/dist

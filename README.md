@@ -139,12 +139,34 @@ ps: 也可以使用 react-app-rewired 和 customize-cra 插件
  <br />
  
 
-## 6.axios
+## 6.**[history](https://github.com/remix-run/history/tree/v4/docs)**
+可通过`history`可以在非组件环境拿到路由信息（暂时没试）
 
-## 7.antd
 
-## 8.axios
+## 7.**[antd](https://ant.design/components/overview-cn/)**
 
-## 9.mobx
+react UI 框架
 
-## **[参考的教程文档](https://bbs.huaweicloud.com/blogs/370666)**
+## 8.**[axios](https://www.npmjs.com/package/axios)**
+封装好的接口请求发送
+
+## 9.**[mobx](https://mobx.js.org/observable-state.html)**
+全局的状态共享管理
+
+# 10.代码工具
+
+- 10.1 **[eslint](https://zh-hans.eslint.org/)**
+    配置规则文件：.eslintrc.js
+    忽略文件：.eslintignore
+
+- 10.2 **[prettier](https://www.prettier.cn/)**
+    配置规则文件：.prettier.js
+    忽略文件：.prettierignore
+
+
+<br />
+<br />
+<br />
+<br />
+
+## **[参考搭建教程文档](https://bbs.huaweicloud.com/blogs/370666)**

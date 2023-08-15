@@ -1,18 +1,17 @@
-import { computed, makeAutoObservable } from "mobx";
+import React from "react";
+import User from "./user";
 
-class UserStore {
-	userinfo = [];
+class RootStore {
 	constructor() {
-		makeAutoObservable(this, {
-			fillerList: computed,
-		});
+		this.User = new User();
 	}
-	get fillerList() {
-		return this.userinfo.filter((item) => item.name === "ailjx");
-	}
-	addUse = () => {
-		this.userinfo.push();
-	};
 }
 
-export default UserStore;
+// 实例化 RootStore 并通过 createContext创建一个上下文对象
+const context = React.createContext(new RootStore());
+
+//通过useContext 接收一个上下文对象作为参数，并返回当前上下文值（useStore）
+const useUser = () => React.useContext(context);
+
+//导出useStore方法，供组件通过调用该方法使用根实例
+export { useUser };

@@ -3,7 +3,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import Layout from "./layouts/default.js";
-import "antd/dist/antd.min.css";
 import "./index.css";
 import "./index.less";
 

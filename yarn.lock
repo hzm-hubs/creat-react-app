@@ -8317,6 +8317,13 @@
   dependencies:
     "use-sync-external-store" "^1.2.0"
 
+"mobx-react@^9.0.0":
+  "integrity" "sha512-rhUBWXK/k4H/jMXZqbL0uTPncRSvJR23tpmJemoAEjJjm0Fkv6tTLG3Cze9MIgvf882Kradx6msizuQxLAiQwA=="
+  "resolved" "https://registry.npmjs.org/mobx-react/-/mobx-react-9.0.0.tgz"
+  "version" "9.0.0"
+  dependencies:
+    "mobx-react-lite" "^4.0.3"
+
 "mobx@^6.10.0", "mobx@^6.9.0":
   "integrity" "sha512-WMbVpCMFtolbB8swQ5E2YRrU+Yu8iLozCVx3CdGjbBKlP7dFiCSuiG06uea3JCFN5DnvtAX7+G5Bp82e2xu0ww=="
   "resolved" "https://registry.npmjs.org/mobx/-/mobx-6.10.0.tgz"

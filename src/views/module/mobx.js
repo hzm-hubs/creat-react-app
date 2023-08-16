@@ -1,18 +1,22 @@
-import { useUser } from "@/store/index";
+import { observer } from 'mobx-react'
+import store from '@/store/index'
 
-export default Mobx = function () {
-	console.log("userInfo", useUser);
+const Mobx = function () {
+  const { userInfo } = store()
 
-	function hanldeUser() {
-		useUser.setUser({
-			name: parseInt(Math.random() * 100),
-		});
-	}
+  console.log('userInfo', userInfo)
 
-	return (
-		<div>
-			<div>{useUser.userInfo}</div>
-			<div onClick={hanldeUser}></div>
-		</div>
-	);
-};
+  function hanldeUser() {
+    console.log('123')
+    userInfo.increment()
+  }
+
+  return (
+    <div>
+      <div>user: {userInfo.times}</div>
+      <button onClick={hanldeUser}>点击</button>
+    </div>
+  )
+}
+
+export default observer(Mobx)

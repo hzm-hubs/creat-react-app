@@ -145,7 +145,15 @@ react UI 框架
 
 ## 9.**[mobx](https://mobx.js.org/observable-state.html)**
 全局的状态共享管理
+若 mobx 更新需要刷新视图，则需要使用`mox-react`中的`observer`包裹组件
 
+```
+import { observer } from 'mobx-react';
+
+const MyComponent = observer(() => {
+  // 渲染逻辑
+});
+```
 # 10.代码工具
 
 - 10.1 **[eslint](https://zh-hans.eslint.org/)**

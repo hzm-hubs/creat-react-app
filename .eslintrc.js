@@ -25,7 +25,7 @@ module.exports = {
 		defineExpose: "readonly",
 		withDefaults: "readonly",
 	},
-	extends: ["prettier"], // 自定义规则
+	extends: ["prettier", "plugin:prettier/recommended"], // 自定义规则
 	rules: {
 		// prettier
 		"prettier/prettier": "error",

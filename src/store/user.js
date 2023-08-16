@@ -1,4 +1,11 @@
-import { computed, makeAutoObservable } from "mobx";
+import {
+	action,
+	autorun,
+	computed,
+	observable,
+	runInAction,
+	makeAutoObservable,
+} from "mobx";
 
 class UserStore {
 	// 初始化变量
@@ -6,13 +13,15 @@ class UserStore {
 	constructor() {
 		// 注册一个可被观察的对象，绑定到this
 		makeAutoObservable(this, {
-			fillerList: computed,
+			setUser: action,
+			getUser: computed,
 		});
 	}
-	get fillerList() {
-		return this.userInfo + "1";
+	get getUser() {
+		return this.userInfo;
 	}
-	addUse = (data) => {
+
+	setUser = (data) => {
 		this.userInfo = data;
 	};
 }

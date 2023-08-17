@@ -8,20 +8,10 @@ module.exports = {
 		alias: {
 			// 约定：使用 @ 表示 src 文件所在路径
 			'@': path.resolve(__dirname, './src')
-		},
-		rules: [
-			// 添加对 Babel 的支持
-			{
-				test: /\.(js|jsx)$/,
-				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						presets: ['@babel/preset-env', '@babel/preset-react'],
-						plugins: [['@babel/plugin-proposal-decorators', { legacy: true }], '@babel/plugin-proposal-class-properties']
-					}
-				}
-			}
-		]
+		}
+	},
+	babel: {
+		// presets: ['@babel/preset-env', '@babel/preset-react'],
+		plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]]
 	}
 }

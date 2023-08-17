@@ -7,7 +7,7 @@ class RootStore {
 	constructor() {
 		this.userInfo = new UserStore()
 		this.times = new TimesStore()
-		// this.province = new ProvinceStore()
+		this.province = new ProvinceStore()
 	}
 }
 

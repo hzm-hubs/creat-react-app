@@ -163,7 +163,7 @@ const MyComponent = observer(() => {
     忽略文件：.eslintignore
 
 - 10.2 **[prettier](https://www.prettier.cn/)**
-    配置文件：.prettierrc.js 或者编辑器配置如 vscode 
+    配置文件：.prettierrc.js 或者package.json中添加prettier字段配置，再者就是编辑器自己的配置如 vscode 
 
     忽略文件：.prettierignore
 
@@ -196,6 +196,9 @@ const MyComponent = observer(() => {
     ```
     **[冲突解决文档](https://juejin.cn/post/7156893291726782500)**
 
+## 11.Babel
+
+    生效文件 .babelrc 或者 .babel.config.js，用于设置代码编译
 
 <br />
 <br />

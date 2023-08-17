@@ -50,7 +50,7 @@ function Tags() {
 				ins: <ins>React</ins>
 			</div>
 		</div>
-	);
+	)
 }
 
-export default Tags;
+export default Tags

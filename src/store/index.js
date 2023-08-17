@@ -1,10 +1,14 @@
 import React from 'react'
 import UserStore from './user'
+import TimesStore from './times'
+import ProvinceStore from './province'
 
 class RootStore {
-  constructor() {
-    this.userInfo = new UserStore()
-  }
+	constructor() {
+		this.userInfo = new UserStore()
+		this.times = new TimesStore()
+		// this.province = new ProvinceStore()
+	}
 }
 
 // 实例化 RootStore 并通过 createContext创建一个上下文对象

@@ -2,21 +2,18 @@ import { observer } from 'mobx-react'
 import store from '@/store/index'
 
 const Mobx = function () {
-  const { userInfo } = store()
+	const { times } = store()
 
-  console.log('userInfo', userInfo)
+	function hanldeUser() {
+		times.increment()
+	}
 
-  function hanldeUser() {
-    console.log('123')
-    userInfo.increment()
-  }
-
-  return (
-    <div>
-      <div>user: {userInfo.times}</div>
-      <button onClick={hanldeUser}>点击</button>
-    </div>
-  )
+	return (
+		<div>
+			<div>user: {times.times}</div>
+			<button onClick={hanldeUser}>点击</button>
+		</div>
+	)
 }
 
 export default observer(Mobx)

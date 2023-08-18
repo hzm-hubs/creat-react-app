@@ -27,12 +27,6 @@ module.exports = {
 	},
 	extends: ['prettier', 'plugin:prettier/recommended'], // 自定义规则
 	rules: {
-		/**
-		 *  "off"或者0 //关闭检测规则
-		 * 	"warn"或者1 //打开并把打开的检测规则作为警告（不影响退出代码）
-		 *   "error"或者2 //打开并把检测规则作为一个错误（退出代码触发时为1）
-		 */
-
 		// prettier
 		'prettier/prettier': 'error',
 

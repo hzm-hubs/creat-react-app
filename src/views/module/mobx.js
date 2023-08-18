@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { observer } from 'mobx-react'
 import { Input, Button } from 'antd'
+import { useLocation, useHistory } from 'react-router-dom'
 import store from '@/store/index'
 
 const Mobx = function () {

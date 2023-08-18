@@ -118,9 +118,7 @@ ps: 也可以使用 react-app-rewired 和 customize-cra 插件
 
 #### 5.2添加新路由步骤
 
-<font color="yellow">
-添加新路由首先需要在views创建页面、其次
-在router中引入声明</font>
+<font color="yellow">添加新路由首先需要在views创建页面、其次在router中引入声明</font>
 
 #### 5.3路由导航
 
@@ -132,7 +130,9 @@ ps: 也可以使用 react-app-rewired 和 customize-cra 插件
     <Route path="teams" element={<Teams />}> 
         <link path="new" element={<NewTeamForm />} />
     </Route>
+
 ## 6.**[history](https://github.com/remix-run/history/tree/v4/docs)**
+
 可通过`history`可以在非组件环境拿到路由信息（暂时没试）
 
 
@@ -156,45 +156,10 @@ const MyComponent = observer(() => {
 ```
 # 10.代码工具
 
-- 10.1 **[eslint](https://zh-hans.eslint.org/)**
-    配置文件：.eslintrc.js或者.eslintrc.json，或者在根项目的package.json中配置项eslintConfig中配置eslint的规则，再者就是
-    编辑工具中的 eslint 配置
+- 1 eslint
 
-    忽略文件：.eslintignore
+- 2 prettier
 
-- 10.2 **[prettier](https://www.prettier.cn/)**
-    配置文件：.prettierrc.js 或者package.json中添加prettier字段配置，再者就是编辑器自己的配置如 vscode 
-
-    忽略文件：.prettierignore
-
--  10.3 因为`eslint`与`prettier`都可以进行代码格式化，为了避免项目中俩者冲突，秉承“使用ESLint作为代码的格式化工具时，关闭可能与Prettier有冲突的格式化规则，把Prettier当做一个linter规则”的方案，主要依靠俩个依赖：
-
-    - eslint-config-prettier 会关闭ESLint中有关代码格式化的配置
-    - eslint-plugin-prettier 把Prettier配置成ESLint的一个插件，让其当做一个linter规则来运行
-
-    这样，只需在项目根目录下的.eslintrc.js中配置如下：
-
-    ```
-
-        {
-            "extends": ["plugin:prettier/recommended"]
-        }
-    
-    ```
-    而plugin:prettier/recommended帮我们做了如下事情：
-    ```
-    {
-
-        "extends": ["prettier"], // 使用eslinst-config-prettier中的配置项
-        "plugins": ["prettier"], // 注册该prettier插件
-        "rules": {
-            "prettier/prettier": "error", // 在eslint中运行prettier，并启用该插件提供的规则
-            "arrow-body-style": "off", // 关闭规则
-            "prefer-arrow-callback": "off" // 关闭规则
-        }
-    }
-    ```
-    **[冲突解决文档](https://juejin.cn/post/7156893291726782500)**
 
 ## 11.Babel
 

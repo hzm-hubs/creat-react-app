@@ -17,7 +17,7 @@ npx create-react-app <project-name>
 
 ## 3.react-scirpts 插件 有引入 dotenv、dotenv-expand 插件
 
-#### 3.1 可直接引入项目根目录下的 .env、.env.\*.local 的配置文件。 可以在.env 设置一些内容变量通过 dotenv 加载到 process.env 中, 自定义变量请 REACT*APP* 开头
+#### 3.1 会直接引入项目根目录下的 .env、.env.\*.local 的配置文件。 可以在.env 设置一些内容变量通过 dotenv 加载到 process.env 中, 自定义变量请 REACT_APP* 开头
 
 ---
 
@@ -60,8 +60,7 @@ eg: 更改项目启动端口号
 
 ## 4. 通过 [craco](https://www.npmjs.com/package/@craco/craco) 设置路径别名
 
-create-react-app （CRA）生成的项目，会通过 react-scripts 有自己的 webpack 设置。默认没有加载
-根目录下的 jsconfig.json、tsconfig.json 文件的逻辑，或者是有自己的逻辑（因为当我创建 tsconfig.json 文件运行项目会提示我项目没有引入 Typescript ）。但我们可以通过 craco 插件设置路径别名，并更改启动脚本使其生效
+create-react-app （CRA）生成的项目，会通过 react-scripts 有自己的 webpack 设置。默认没有加载根目录下的 webpack文件，jsconfig.json、tsconfig.json 文件的逻辑，或者是有自己的逻辑（因为当我创建 tsconfig.json 文件运行项目会提示我项目没有引入 Typescript ）。但我们可以通过 craco 插件设置路径别名，并更改启动脚本使其生效
 
 #### 4.1 在根目录创建 craco.config.json
 
@@ -163,7 +162,7 @@ const MyComponent = observer(() => {
 
 ## 11.Babel
 
-    生效文件 .babelrc 或者 .babel.config.js，用于设置代码编译
+    用于设置代码编译，本项目用于支持修饰器写法，因为CRA又自己逻辑，也通过craco插件覆盖
 
 <br />
 <br />

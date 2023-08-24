@@ -40,12 +40,10 @@ module.exports = {
 		'no-restricted-globals': ['error'],
 		'no-restricted-syntax': [
 			'error',
-			[
-				'ObjectPattern > RestElement',
-				{
-					selector: 'Decorator'
-				}
-			]
+			'ObjectPattern > RestElement',
+			{
+				selector: 'Decorator'
+			}
 		],
 		'no-fallthrough': 1, // 禁止 case 语句落空
 		'no-lonely-if': 1, // 禁止 if 作为唯一的语句出现在 else 语句中.如果一个if陈述是该else块中唯一的陈述，那么使用一个else if表格通常会更清晰。

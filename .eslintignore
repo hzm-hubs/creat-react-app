@@ -2,3 +2,6 @@
 
 /node_modules
 /dist
+
+# 装饰器写法有问题时好时坏，现在这里躲避校验
+/src/store/province.js

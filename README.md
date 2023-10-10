@@ -83,13 +83,22 @@ const path = require('path');
 
 ```
 
-#### 4.2 修改 package.json 中的启动命令为 craco
+#### 4.2 修改 package.json 脚本命令中的 react-scripts 替换到 craco
 
 `"dev": "dotenv -e .env.dev react-scripts start",`
 
 换到
 
 `dotenv -e .env.dev craco start`
+
+因为设置了路径别名，build 脚本需要更换：
+
+`"build": "dotenv -e .env.prod react-scripts build"`
+
+换到
+
+`"build": "dotenv -e .env.prod craco build"`
+
 
 ps: 也可以使用 react-app-rewired 和 customize-cra 插件
 

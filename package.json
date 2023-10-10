@@ -7,7 +7,7 @@
 		"dev:test": "dotenv -e .env.test craco start ",
 		"dev:prod": "dotenv -e .env.prod craco start",
 		"test": "react-scripts test",
-		"build": "dotenv -e .env.prod react-scripts build",
+		"build": "dotenv -e .env.prod craco build",
 		"eject": "react-scripts eject"
 	},
 	"devDependencies": {

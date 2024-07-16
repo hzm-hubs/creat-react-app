@@ -3,6 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import reportWebVitals from './reportWebVitals'
 import Layout from './layouts/default.js'
+import { history } from './plugins/history.js'
 import './index.css'
 import './index.less'
 

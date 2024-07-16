@@ -24,7 +24,7 @@ export const menus = [
 	}
 ]
 
-export const handleMenu = (data) => {
+export const handleMenu = () => {
 	return menus.map((route, index) => {
 		// exact 完全匹配 <Route exact></Route>
 		return <Route path={route.path} element={route.element} key={index}></Route>

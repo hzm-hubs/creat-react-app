@@ -6,8 +6,13 @@ module.exports = {
 	mode: 'development',
 	entry: path.join(__dirname, '/src/index.js'),
 	output: {
-		filename: 'bundle.js',
+		filename: '[hash].bundle.js',
 		path: path.resolve(__dirname, 'dist')
+	},
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, './src')
+		}
 	},
 	module: {
 		rules: [
@@ -42,9 +47,9 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({ template: path.resolve(__dirname, '/public/index.html') })
 	],
-	resolve: {
-		alias: {
-			'@': path.resolve(__dirname, './src')
+	optimization: {
+		runtimeChunk: {
+			name: 'runtime'
 		}
 	}
 }

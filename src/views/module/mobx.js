@@ -2,7 +2,9 @@ import { useState } from 'react'
 import { observer } from 'mobx-react'
 import { Input, Button } from 'antd'
 import { useLocation, useHistory } from 'react-router-dom'
+import ItemElement from './components/ItemElement.js'
 import store from '@/store/index'
+import './index.css'
 
 const Mobx = function () {
 	const [value, setValue] = useState('')
@@ -37,6 +39,7 @@ const Mobx = function () {
 					确定
 				</Button>
 			</div>
+			<ItemElement></ItemElement>
 		</div>
 	)
 }
